@@ -1,0 +1,441 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+
+/* Barra de rolagem personalizada */
+::-webkit-scrollbar {
+    height: 10px;
+    width: 8px;
+    border-radius: 15px;
+    background-color: rgb(236, 236, 236);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #053f34;
+    border-radius: 15px;
+}
+
+.wpp {
+    width: 64px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+}
+
+.wpp:hover {
+    transform: scale(1.02);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    color: #fff;
+    padding: 20px 15px 15px 15px;
+    background: rgba(0, 0, 0, 0.356);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Kanit', sans-serif;
+    line-height: 30px;
+    font-weight: bolder;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.logo:hover {
+    transform: scale(1.04);
+}
+
+.lista-header {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.lista-header li {
+    transition: all .5s;
+}
+
+.lista-header li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lista-header li:hover {
+    transform: scale(1.04);
+    border-bottom: 1px solid #fff;
+}
+
+
+/* ESTILO DO SLIDER */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 0 3px 3px 0;
+    opacity: 0.6;
+    transition: all .3s;
+}
+
+.prev:hover,
+.next:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* ESTILO DA SECTION 1 */
+.section-1 {
+    padding: 0 20px;
+    margin: 50px auto;
+    max-width: 1300px;
+}
+
+.section-1 div {
+    margin: 10px 0;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(122, 122, 122, 0.342);
+    transition: all .5s;
+}
+
+.section-1 div:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px #053f344f;
+}
+
+.section-1 h2 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #053f34;
+}
+
+.section-1 h3 {
+    text-align: center;
+    color: rgb(92, 92, 92);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.bg-icon {
+    height: 10px;
+    background-image: url('https://cdn-hweb.hsystem.com.br/625db85ed50cffe6eda44b50/cda9b900418948dd81bfdcda39c5c7de.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+}
+
+.section-1 p {
+    margin-bottom: 25px;
+    font-size: 17px;
+    color: rgb(112, 112, 112);
+}
+
+/* ESTILO SECTION 2 */
+.section-2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.section2-logo {
+    width: 60%;
+    height: 600px;
+    filter: brightness(50%);
+}
+
+.card-container {
+    position: absolute;
+}
+
+.card-container1 {
+    right: 23%;
+}
+
+.card-container2 {
+    right: 0.5%;
+}
+
+.card {
+    background-color: #fff;
+    width: 405px;
+    height: 435px;
+    margin: 20px 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    transition: all 0.7s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #dbe5e6;
+    transition: all 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    margin: 20px;
+}
+
+.card-title h3 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    color: #053f34;
+}
+
+.card-description p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ESTILOS SECTION 3 */
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url("images/sapucai-mirim.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo-section3 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    max-width: 300px;
+    color: #fff;
+    margin: 50px auto 0 auto;
+    background-color: rgba(88, 88, 88, 0.253);
+    border-radius: 10px;
+}
+
+.card-section3 {
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 20px 7px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.button {
+    font-weight: 600;
+    color: white;
+    margin: 20px auto 0 auto;
+    width: 200px;
+    padding: 13px 20px;
+    border: 0;
+    border: 1px solid #053f34;
+    background-color: #053f34;
+    border-radius: 10px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: #053f34;
+}
+
+/* ESTILOS SECTION 4 */
+.section-4 {
+    height: 500px;
+    background-image: url("images/montanhasEscuras.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-section4 {
+    padding: 20px 40px;
+    max-width: 700px;
+    background-color: rgba(190, 157, 116, 0.384);
+}
+
+.card-section4 h3 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: #fff;
+}
+
+.card-section4 p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.button-1 {
+    font-weight: 600;
+    color: white;
+    margin: 20px auto 0 auto;
+    width: 200px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 10px;
+    transition: all .5s;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.button-1:hover {
+    background-color: transparent;
+    color: #053f34;
+    border: 1px solid #053f34;
+}
+
+/* ESTILOS SECTION 5 */
+.section-5 {
+    padding: 50px 0px;
+    background-color: #053f34;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-5 div {
+    padding: 10px;
+}
+
+.section-5 div h4 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.section-5 div img {
+    margin-bottom: -8px;
+    margin-right: 4px;
+    text-align: center;
+    width: 30px;
+}
+
+.section-5 div p a {
+    color: #fff;
+}
+
+/* ESTILOS SECTION 6 */
+.section-6 {
+    max-width: 650px;
+    text-align: center;
+    margin: 30px auto 60px auto;
+    min-height: 300px;
+}
+
+.section-6 h4 {
+    color: #053f34;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.endereco {
+    font-size: 17px;
+}
+
+.grupos {
+    margin: 10px 0 4px 0;
+    font-size: 20px;
+}
+
+.section-6 ul {
+    list-style: none;
+}
+
+.section-6 ul li a {
+    color: #424242;
+}
+
+.dev {
+    font-weight: normal;
+    margin: 20px 0 0 15px;
+    font-size: 13px;
+}
+
+.dev-copy {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.dev-copy a {
+    color: #000;
+    text-decoration: none;
+}
+
+.dev-copy a:hover {
+    text-decoration: underline;
+}
